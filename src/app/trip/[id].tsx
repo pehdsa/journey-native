@@ -118,16 +118,18 @@ export default function Trip() {
 
     return (
         <SafeAreaView >            
-            <View className="h-full px-5 pt-2 ">
-                <Input variant="tertiary">
-                    <MapPin color={colors.zinc[400]} size={20} />
-                    <Input.Field value={ tripDetails.when } readOnly />
-                    <TouchableOpacity onPress={() => setShowModal(MODAL.UPDATE_TRIP)} activeOpacity={0.7}>
-                        <View className="w-9 h-9 bg-zinc-800 items-center justify-center rounded">
-                            <Settings2 color={colors.zinc[400]} size={20} />
-                        </View>
-                    </TouchableOpacity>
-                </Input>
+            <View className="h-full pt-2 ">
+                <View className="px-5">
+                    <Input variant="tertiary">
+                        <MapPin color={colors.zinc[400]} size={20} />
+                        <Input.Field value={ tripDetails.when } readOnly />
+                        <TouchableOpacity onPress={() => setShowModal(MODAL.UPDATE_TRIP)} activeOpacity={0.7}>
+                            <View className="w-9 h-9 bg-zinc-800 items-center justify-center rounded">
+                                <Settings2 color={colors.zinc[400]} size={20} />
+                            </View>
+                        </TouchableOpacity>
+                    </Input>
+                </View>
 
                 { option === "activity" ? 
                     <Activities tripDatails={tripDetails} /> 
@@ -135,7 +137,7 @@ export default function Trip() {
                     <Details tripId={ tripDetails.id }  /> 
                 }
 
-                <View className="w-full absolute -bottom-1 self-center justify-end pb-5 z-10 bg-zinc-950">
+                <View className="w-full absolute -bottom-1 self-center justify-end px-5 pb-5 z-10 bg-zinc-950">
                     <View className="w-full flex-row bg-zinc-900 p-4 rounded-lg border-zinc-800 gap-2">
                         
                         <View className="flex-1">

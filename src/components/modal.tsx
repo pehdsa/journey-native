@@ -70,7 +70,9 @@ export function Modal({
 
                   {onClose && (
                     <TouchableOpacity activeOpacity={0.7} onPress={onClose}>
-                      <X color={colors.zinc[400]} size={20} />
+                      <View className="w-10 h-10 items-center justify-center"> 
+                        <X color={colors.zinc[400]} size={20} />
+                      </View>
                     </TouchableOpacity>
                   )}
                 </View>
